@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>StatCom Africa X</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#b4ebff",
+              surface: "#f7f9fb",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2d3133",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "surface-container": "#eceef0",
+              "surface-dim": "#d8dadc",
+              "surface-variant": "#e0e3e5",
+              "on-surface": "#191c1e",
+              "secondary-fixed-dim": "#abc7ff",
+              "on-secondary-fixed": "#001b3f",
+              "primary-container": "#007abd",
+              primary: "#006097",
+              error: "#ba1a1a",
+              "on-primary-fixed-variant": "#004a76",
+              background: "#f7f9fb",
+              "outline-variant": "#bfc7d2",
+              secondary: "#3f5e94",
+              "primary-fixed": "#cee5ff",
+              "surface-container-highest": "#e0e3e5",
+              "inverse-primary": "#96cbff",
+              "on-secondary-container": "#2e4f83",
+              "secondary-fixed": "#d7e3ff",
+              "primary-fixed-dim": "#96cbff",
+              "on-tertiary-fixed": "#001f27",
+              "on-tertiary-fixed-variant": "#004e5f",
+              "tertiary-container": "#007f9a",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "on-error-container": "#93000a",
+              "electric-cyan": "#00D4FF",
+              "on-background": "#191c1e",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#001d33",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#fdfcff",
+              "surface-tint": "#00639b",
+              outline: "#707882",
+              "un-blue": "#0087D1",
+              "surface-border": "#E2E8F0",
+              "surface-container-high": "#e6e8ea",
+              "deep-navy": "#002C5F",
+              "stat-green": "#10B981",
+              "inverse-on-surface": "#eff1f3",
+              "tertiary-fixed-dim": "#3cd7ff",
+              tertiary: "#00657a",
+              "on-secondary-fixed-variant": "#25467a",
+              "on-tertiary-container": "#fafdff",
+              "secondary-container": "#a2c2fd",
+              "on-surface-variant": "#3f4851",
+              "stat-red": "#EF4444",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              "margin-desktop": "40px",
+              "section-gap": "80px",
+              base: "8px",
+              "margin-mobile": "16px",
+              "container-max": "1280px",
+            },
+            fontFamily: {
+              "headline-md": ["Hanken Grotesk"],
+              metadata: ["Inter"],
+              "body-lg": ["Inter"],
+              "headline-lg": ["Hanken Grotesk"],
+              "label-md": ["Inter"],
+              "body-md": ["Inter"],
+              "display-lg-mobile": ["Hanken Grotesk"],
+              "display-lg": ["Hanken Grotesk"],
+            },
+            fontSize: {
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  fontWeight: "700",
+                },
+              ],
+              metadata: [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "30px",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  fontWeight: "700",
+                },
+              ],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "26px",
+                  fontWeight: "400",
+                },
+              ],
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "800",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .material-symbols-outlined.fill {
+        font-variation-settings: "FILL" 1;
+      }
+
+      /* Hide scrollbar for tabs */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .text-secondary-container {
+          --tw-text-opacity: 1;
+          color: #db9224;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background antialiased selection:bg-un-blue selection:text-white"
+  >
+    <!-- TopAppBar -->
+  <header class="bg-surface-container-lowest top-0 z-50 w-full border-b border-surface-border">
+    <!-- Top Utility Bar -->
+    <div class="bg-white border-b border-surface-border">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-2 flex justify-end items-center gap-6">
+            <div class="flex items-center gap-4 text-metadata font-metadata text-un-blue">
+                <a href="#" class="hover:text-primary">UNECA site</a>
+                <a href="#" class="hover:text-primary">Archived Events</a>
+                <a href="#" class="hover:text-primary">Log in</a>
+            </div>
+            <div class="h-4 w-px bg-outline-variant mx-2"></div>
+            <a href="#" class="text-metadata font-metadata text-un-blue font-bold hover:text-primary">Français</a>
+            <div class="flex items-center gap-3 ml-4 text-un-blue">
+                <a href="#" aria-label="Facebook" class="hover:text-primary transition-colors"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                <a href="#" aria-label="Twitter" class="hover:text-primary transition-colors"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+                <a href="#" aria-label="YouTube" class="hover:text-primary transition-colors"><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="#" aria-label="Albums" class="hover:text-primary transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">photo_library</span></a>
+                <a href="#" aria-label="RSS" class="hover:text-primary transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">rss_feed</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navigation Bar -->
+    <div class="bg-white">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo-event.svg" alt="UNECA Events Logo" class="h-16 md:h-20 object-contain">
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="https://www.uneca.org/eca-events/" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Home</a>
+                <a href="https://www.uneca.org/eca-events/all/current-and-upcoming" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Events List</a>
+                <a href="https://www.uneca.org/eca-events/videos" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Videos</a>
+                <a href="https://www.uneca.org/eca-events/albums" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Albums</a>
+                <button class="ml-4 text-on-surface-variant hover:text-un-blue transition-colors">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </nav>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-on-surface-variant">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+  </header>
+
+    <main
+      class="max-w-container-max mx-auto md:px-margin-desktop w-full pb-section-gap"
+    >
+      <!-- Hero Section -->
+      <section
+        class="relative w-full text-white mt-0 md:mt-6 mb-8 z-50 min-h-[500px] flex flex-col lg:flex-row bg-deep-navy md:rounded-2xl shadow-lg"
+      >
+        <div
+          class="relative z-10 px-margin-mobile py-8 md:py-8 md:px-8 flex flex-col items-start justify-center w-full lg:w-1/2"
+        >
+          <h2
+            class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg mb-6 leading-tight font-extrabold tracking-tight text-white drop-shadow-md"
+          >
+            Statistical Commission for Africa
+          </h2>
+          <p
+            class="text-xl md:text-2xl text-white font-semibold mb-10 max-w-2xl border-l-4 border-electric-cyan pl-6 py-4 bg-gradient-to-r from-un-blue/20 to-transparent rounded-r-xl backdrop-blur-sm shadow-md italic leading-relaxed"
+          >
+            "Unleashing the value of data in Africa: making official statistics
+            a true mirror of the continent"
+          </p>
+          <div class="flex flex-col gap-4 sm:gap-6 mb-10 w-full">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
+              <div
+                class="group flex flex-1 items-center gap-4 bg-surface-container-lowest/10 p-4 md:p-5 rounded-2xl backdrop-blur-md border border-white/10 shadow-sm hover:bg-surface-container-lowest/20 hover:border-un-blue/50 transition-all duration-300"
+              >
+                <div
+                  class="rounded-full bg-un-blue/40 group-hover:bg-un-blue/60 transition-colors flex items-center justify-center shrink-0 w-12 h-12 shadow-inner"
+                >
+                  <span
+                    class="material-symbols-outlined text-electric-cyan group-hover:text-white transition-colors"
+                    >event</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="text-metadata font-metadata text-primary-fixed-dim uppercase tracking-wider mb-0.5"
+                  >
+                    Start Date
+                  </p>
+                  <p class="text-body-lg font-bold text-white tracking-tight">
+                    19 October, 2026
+                  </p>
+                </div>
+              </div>
+              <div
+                class="group flex flex-1 items-center gap-4 bg-surface-container-lowest/10 p-4 md:p-5 rounded-2xl backdrop-blur-md border border-white/10 shadow-sm hover:bg-surface-container-lowest/20 hover:border-un-blue/50 transition-all duration-300"
+              >
+                <div
+                  class="rounded-full bg-un-blue/40 group-hover:bg-un-blue/60 transition-colors flex items-center justify-center shrink-0 w-12 h-12 shadow-inner"
+                >
+                  <span
+                    class="material-symbols-outlined text-electric-cyan group-hover:text-white transition-colors"
+                    >event_available</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="text-metadata font-metadata text-primary-fixed-dim uppercase tracking-wider mb-0.5"
+                  >
+                    End Date
+                  </p>
+                  <p class="text-body-lg font-bold text-white tracking-tight">
+                    23 October, 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group flex items-center gap-4 bg-surface-container-lowest/10 p-4 md:p-5 rounded-2xl backdrop-blur-md border border-white/10 shadow-sm w-full sm:w-max hover:bg-surface-container-lowest/20 hover:border-un-blue/50 transition-all duration-300"
+            >
+              <div
+                class="rounded-full bg-un-blue/40 group-hover:bg-un-blue/60 transition-colors flex items-center justify-center shrink-0 w-12 h-12 shadow-inner"
+              >
+                <span
+                  class="material-symbols-outlined text-electric-cyan group-hover:text-white transition-colors"
+                  >location_on</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-metadata font-metadata text-primary-fixed-dim uppercase tracking-wider mb-0.5"
+                >
+                  Location
+                </p>
+                <p class="text-body-lg font-bold text-white tracking-tight">
+                  UNCC, Addis Ababa, Ethiopia
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a
+              href="https://indico.un.org/event/1025300"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-un-blue text-white px-8 py-3.5 rounded-xl text-label-md font-label-md font-bold hover:bg-primary transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <span class="material-symbols-outlined">how_to_reg</span>
+              Register Now
+            </a>
+            <div
+              class="relative w-full sm:w-auto z-50"
+              id="add-to-calendar-dropdown"
+            >
+              <button
+                class="bg-surface-container-lowest/10 border border-white/20 backdrop-blur-md text-white px-8 py-3.5 rounded-xl text-label-md font-label-md hover:bg-surface-container-lowest/20 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2 shadow-sm"
+                onclick="toggleCalendarDropdown()"
+              >
+                <span class="material-symbols-outlined text-primary-fixed-dim"
+                  >event_available</span
+                >
+                Add to Calendar
+                <span
+                  class="material-symbols-outlined text-sm transition-transform duration-200 text-primary-fixed-dim"
+                  id="calendar-dropdown-icon"
+                  style="transform: rotate(180deg)"
+                  >expand_more</span
+                >
+              </button>
+              <div
+                class="absolute top-full left-0 right-0 sm:right-auto mt-2 w-full sm:w-56 bg-surface-container-lowest rounded-xl shadow-xl border border-surface-border py-2 z-50 origin-top transition-all duration-200 opacity-100 scale-100"
+                id="calendar-dropdown-menu"
+              >
+                <a
+                  class="flex items-center gap-3 px-4 py-3 text-body-md text-on-surface hover:bg-surface-container-low transition-colors w-full text-left"
+                  href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=10th%20Session%20of%20StatCom-Africa&dates=20261009/20261024&details=Unleashing%20the%20value%20of%20data%20in%20Africa%3A%20making%20official%20statistics%20a%20true%20mirror%20of%20the%20continent&location=Addis%20Ababa%2C%20Ethiopia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="material-symbols-outlined text-un-blue text-lg"
+                    >calendar_month</span
+                  >
+                  Google Calendar
+                </a>
+                <a
+                  class="flex items-center gap-3 px-4 py-3 text-body-md text-on-surface hover:bg-surface-container-low transition-colors w-full text-left"
+                  href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=10th%20Session%20of%20StatCom-Africa&startdt=2026-10-09&enddt=2026-10-24&body=Unleashing%20the%20value%20of%20data%20in%20Africa%3A%20making%20official%20statistics%20a%20true%20mirror%20of%20the%20continent&location=Addis%20Ababa%2C%20Ethiopia&allday=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="material-symbols-outlined text-un-blue text-lg"
+                    >mail</span
+                  >
+                  Outlook
+                </a>
+                <a
+                  class="flex items-center gap-3 px-4 py-3 text-body-md text-on-surface hover:bg-surface-container-low transition-colors w-full text-left"
+                  href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AURL:https://www.uneca.org/%0ADTSTART;VALUE=DATE:20261009%0ADTEND;VALUE=DATE:20261024%0ASUMMARY:10th%20Session%20of%20StatCom-Africa%0ADESCRIPTION:Unleashing%20the%20value%20of%20data%20in%20Africa:%20making%20official%20statistics%20a%20true%20mirror%20of%20the%20continent%0ALOCATION:Addis%20Ababa%5C,%20Ethiopia%0AEND:VEVENT%0AEND:VCALENDAR"
+                  download="statcom-africa-2026.ics"
+                >
+                  <span class="material-symbols-outlined text-un-blue text-lg"
+                    >event</span
+                  >
+                  iCal
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-0 overflow-hidden md:rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
+        >
+          <img
+            alt="10th Session of StatCom-Africa"
+            class="absolute inset-0 h-full w-full object-fill object-center"
+            src="statcom-hero-image.png"
+          />
+        </div>
+      </section>
+      <!-- Sticky Navigation Tabs (Mobile optimized) -->
+      <div
+        class="sticky top-0 bg-surface/90 backdrop-blur-md border-b border-surface-border mb-8 px-margin-mobile md:px-0 z-40"
+      >
+        <nav class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory">
+          <button
+            class="tab-button snap-start whitespace-nowrap px-6 text-label-md font-label-md transition-colors py-2 my-2 mx-1 bg-un-blue text-white rounded-full"
+            onclick="switchTab('overview')"
+          >
+            Overview
+          </button>
+          <button
+            class="tab-button snap-start whitespace-nowrap px-6 text-label-md font-label-md transition-colors py-4 text-on-surface-variant hover:text-un-blue"
+            onclick="switchTab('agenda')"
+          >
+            Agenda
+          </button>
+          <button
+            class="tab-button snap-start whitespace-nowrap px-6 text-label-md font-label-md transition-colors py-4 text-on-surface-variant hover:text-un-blue"
+            onclick="switchTab('documents')"
+          >
+            Documents
+          </button>
+          <button
+            class="tab-button snap-start whitespace-nowrap px-6 text-label-md font-label-md transition-colors py-4 text-on-surface-variant hover:text-un-blue"
+            onclick="switchTab('logistics')"
+          >
+            Information Notes
+          </button>
+        </nav>
+      </div>
+      <!-- Main Content Area -->
+      <div
+        class="px-margin-mobile md:px-0 grid grid-cols-1 lg:grid-cols-12 gap-gutter"
+      >
+        <!-- Left Column: Primary Content -->
+        <div class="lg:col-span-8 space-y-8">
+          <!-- Overview Cards -->
+          <section
+            class="tab-content scroll-mt-32 space-y-6 block"
+            id="overview"
+          >
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm border border-surface-border relative overflow-hidden group md:p-10 shadow-md"
+            >
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-bl-full -z-0 transition-transform group-hover:scale-110"
+              ></div>
+              <div class="flex items-center gap-3 mb-4 relative z-10">
+                <div
+                  class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+                >
+                  <span class="material-symbols-outlined">info</span>
+                </div>
+                <h3 class="text-headline-md font-headline-md text-deep-navy">
+                  Background
+                </h3>
+              </div>
+              <p
+                class="text-body-md font-body-md text-on-surface-variant relative z-10"
+              >
+                The Statistical Commission for Africa is the regional equivalent
+                of the Statistical Commission of the Economic and Social
+                Council, which is the highest body in the global statistical
+                system. It is the highest decision-making body in Africa
+                responsible for setting statistical standards, developing
+                concepts and methods and implementing them at the national,
+                subregional and continental levels.
+              </p>
+            </div>
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm border border-surface-border md:p-10 shadow-md"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+                >
+                  <span class="material-symbols-outlined">target</span>
+                </div>
+                <h3 class="text-headline-md font-headline-md text-deep-navy">
+                  Objectives
+                </h3>
+              </div>
+              <p class="text-body-md font-body-md text-on-surface-variant mb-4">
+                The meeting provides an opportunity for participants to discuss
+                the link between African and global statistical systems to
+                ensure that Africa is not left behind in global statistical
+                initiatives.
+              </p>
+              <ul class="space-y-3 mt-4">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-electric-cyan mt-1"
+                    >check_circle</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Discuss progress and statistical development in African
+                    statistical systems.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-electric-cyan mt-1"
+                    >check_circle</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Take stock of ongoing global initiatives and mainstream new
+                    methodologies.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-electric-cyan mt-1"
+                    >check_circle</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Modernize and transform national statistical systems in
+                    Africa.</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 shadow-sm border border-surface-border md:p-10 shadow-md"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+                >
+                  <span class="material-symbols-outlined">flag</span>
+                </div>
+                <h3 class="text-headline-md font-headline-md text-deep-navy">
+                  Expected Outcomes
+                </h3>
+              </div>
+              <ul class="space-y-3 mt-4">
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-stat-green mt-1"
+                    >done_all</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Endorsement of the revised African Charter on
+                    Statistics.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-stat-green mt-1"
+                    >done_all</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Commitments to increase domestic financing for statistical
+                    systems.</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-stat-green mt-1"
+                    >done_all</span
+                  >
+                  <span
+                    class="text-body-md font-body-md text-on-surface-variant"
+                    >Adoption of guidelines for the 2030 round of Population and
+                    Housing Censuses.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- Agenda Section -->
+          <section
+            class="tab-content scroll-mt-32 space-y-6 hidden"
+            id="agenda"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+              >
+                <span class="material-symbols-outlined">calendar_today</span>
+              </div>
+              <h3 class="text-headline-md font-headline-md text-deep-navy">
+                Agenda
+              </h3>
+            </div>
+            <div
+              class="bg-surface-container-lowest rounded-2xl border border-surface-border overflow-hidden shadow-md"
+            >
+              <div
+                class="flex border-b border-surface-border bg-surface-container-low overflow-x-auto hide-scrollbar"
+              >
+                <button
+                  class="px-6 py-3 text-label-md font-label-md bg-un-blue text-white whitespace-nowrap"
+                >
+                  Monday, 19 Oct
+                </button>
+                <button
+                  class="px-6 py-3 text-label-md font-label-md text-on-surface-variant hover:bg-un-blue/10 whitespace-nowrap"
+                >
+                  Tuesday, 20 Oct
+                </button>
+                <button
+                  class="px-6 py-3 text-label-md font-label-md text-on-surface-variant hover:bg-un-blue/10 whitespace-nowrap"
+                >
+                  Wednesday, 21 Oct
+                </button>
+              </div>
+              <div class="p-6 space-y-8">
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 relative">
+                  <div
+                    class="shrink-0 sm:w-28 text-metadata font-metadata text-un-blue font-bold flex items-start pt-1"
+                  >
+                    09:00 - 10:30
+                  </div>
+                  <div
+                    class="space-y-2 flex-1 pb-6 sm:border-l-2 border-surface-border sm:pl-6 relative"
+                  >
+                    <div
+                      class="hidden sm:block absolute w-3 h-3 bg-un-blue rounded-full -left-[7px] top-1.5 ring-4 ring-white"
+                    ></div>
+                    <h4 class="text-body-md font-bold text-deep-navy">
+                      Opening Ceremony
+                    </h4>
+                    <p class="text-body-md text-on-surface-variant">
+                      Official opening by the Executive Secretary of ECA, AU
+                      Commissioner for Economic Development, Trade, Tourism,
+                      Industry and Minerals, and other high-level dignitaries.
+                    </p>
+                    <div class="flex items-center gap-2 mt-2">
+                      <span
+                        class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low text-metadata rounded-md text-on-surface-variant font-medium"
+                        ><span class="material-symbols-outlined text-[14px]"
+                          >meeting_room</span
+                        >
+                        Conference Room 1</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 relative">
+                  <div
+                    class="shrink-0 sm:w-28 text-metadata font-metadata text-outline font-bold flex items-start pt-1"
+                  >
+                    10:30 - 11:00
+                  </div>
+                  <div
+                    class="space-y-2 flex-1 pb-6 sm:border-l-2 border-surface-border sm:pl-6 relative"
+                  >
+                    <div
+                      class="hidden sm:block absolute w-3 h-3 bg-surface-variant rounded-full -left-[7px] top-1.5 ring-4 ring-white"
+                    ></div>
+                    <h4
+                      class="text-body-md font-bold text-on-surface-variant italic"
+                    >
+                      Coffee Break & Group Photo
+                    </h4>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 relative">
+                  <div
+                    class="shrink-0 sm:w-28 text-metadata font-metadata text-un-blue font-bold flex items-start pt-1"
+                  >
+                    11:00 - 13:00
+                  </div>
+                  <div
+                    class="space-y-2 flex-1 pb-6 sm:border-l-2 border-surface-border sm:pl-6 relative"
+                  >
+                    <div
+                      class="hidden sm:block absolute w-3 h-3 bg-un-blue rounded-full -left-[7px] top-1.5 ring-4 ring-white"
+                    ></div>
+                    <h4 class="text-body-md font-bold text-deep-navy">
+                      Session 1: High-Level Panel on Data Sovereignty
+                    </h4>
+                    <p class="text-body-md text-on-surface-variant">
+                      Moderated discussion on the importance of data ownership
+                      in the African context, featuring Directors General of
+                      National Statistical Offices.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 relative">
+                  <div
+                    class="shrink-0 sm:w-28 text-metadata font-metadata text-outline font-bold flex items-start pt-1"
+                  >
+                    13:00 - 14:30
+                  </div>
+                  <div
+                    class="space-y-2 flex-1 pb-6 sm:border-l-2 border-surface-border sm:pl-6 relative"
+                  >
+                    <div
+                      class="hidden sm:block absolute w-3 h-3 bg-surface-variant rounded-full -left-[7px] top-1.5 ring-4 ring-white"
+                    ></div>
+                    <h4
+                      class="text-body-md font-bold text-on-surface-variant italic"
+                    >
+                      Lunch Break
+                    </h4>
+                  </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-6 relative">
+                  <div
+                    class="shrink-0 sm:w-28 text-metadata font-metadata text-un-blue font-bold flex items-start pt-1"
+                  >
+                    14:30 - 16:30
+                  </div>
+                  <div
+                    class="space-y-2 flex-1 sm:border-l-2 border-surface-border sm:pl-6 relative"
+                  >
+                    <div
+                      class="hidden sm:block absolute w-3 h-3 bg-un-blue rounded-full -left-[7px] top-1.5 ring-4 ring-white"
+                    ></div>
+                    <h4 class="text-body-md font-bold text-deep-navy">
+                      Session 2: Transforming National Statistical Systems
+                    </h4>
+                    <p class="text-body-md text-on-surface-variant">
+                      Presentation of the regional report on statistical
+                      transformation and adoption of new technologies for census
+                      data collection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Documents Section -->
+          <section
+            class="tab-content scroll-mt-32 space-y-6 hidden"
+            id="documents"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+              >
+                <span class="material-symbols-outlined">description</span>
+              </div>
+              <h3 class="text-headline-md font-headline-md text-deep-navy">
+                Documents
+              </h3>
+            </div>
+            <div class="space-y-6">
+              <div>
+                <h4
+                  class="text-label-md font-label-md uppercase tracking-widest text-on-surface-variant mb-4"
+                >
+                  Working Documents
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a
+                    class="flex items-start gap-4 p-4 bg-surface-container-lowest border border-surface-border rounded-xl hover:border-un-blue hover:shadow-md transition-all group"
+                    href="#"
+                  >
+                    <div
+                      class="bg-error-container text-on-error-container p-2 rounded-lg shrink-0"
+                    >
+                      <span class="material-symbols-outlined"
+                        >picture_as_pdf</span
+                      >
+                    </div>
+                    <div>
+                      <h5
+                        class="text-body-md font-semibold text-deep-navy group-hover:text-un-blue transition-colors"
+                      >
+                        Provisional Agenda and Timetable
+                      </h5>
+                      <p class="text-metadata text-on-surface-variant mt-1">
+                        ECA/STATCOM/10/1 • 245 KB
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    class="flex items-start gap-4 p-4 bg-surface-container-lowest border border-surface-border rounded-xl hover:border-un-blue hover:shadow-md transition-all group"
+                    href="#"
+                  >
+                    <div
+                      class="bg-error-container text-on-error-container p-2 rounded-lg shrink-0"
+                    >
+                      <span class="material-symbols-outlined"
+                        >picture_as_pdf</span
+                      >
+                    </div>
+                    <div>
+                      <h5
+                        class="text-body-md font-semibold text-deep-navy group-hover:text-un-blue transition-colors"
+                      >
+                        Concept Note
+                      </h5>
+                      <p class="text-metadata text-on-surface-variant mt-1">
+                        ECA/STATCOM/10/2 • 1.2 MB
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    class="flex items-start gap-4 p-4 bg-surface-container-lowest border border-surface-border rounded-xl hover:border-un-blue hover:shadow-md transition-all group"
+                    href="#"
+                  >
+                    <div
+                      class="bg-primary-container text-on-primary-container p-2 rounded-lg shrink-0"
+                    >
+                      <span class="material-symbols-outlined">description</span>
+                    </div>
+                    <div>
+                      <h5
+                        class="text-body-md font-semibold text-deep-navy group-hover:text-un-blue transition-colors"
+                      >
+                        Draft Strategic Framework (2026-2030)
+                      </h5>
+                      <p class="text-metadata text-on-surface-variant mt-1">
+                        ECA/STATCOM/10/3 • 850 KB • Word
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h4
+                  class="text-label-md font-label-md uppercase tracking-widest text-on-surface-variant mb-4 mt-8"
+                >
+                  Information Documents
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a
+                    class="flex items-start gap-4 p-4 bg-surface-container-lowest border border-surface-border rounded-xl hover:border-un-blue hover:shadow-md transition-all group"
+                    href="#"
+                  >
+                    <div
+                      class="bg-surface-variant text-on-surface-variant p-2 rounded-lg shrink-0"
+                    >
+                      <span class="material-symbols-outlined">info</span>
+                    </div>
+                    <div>
+                      <h5
+                        class="text-body-md font-semibold text-deep-navy group-hover:text-un-blue transition-colors"
+                      >
+                        Information Note for Participants
+                      </h5>
+                      <p class="text-metadata text-on-surface-variant mt-1">
+                        Logistics, venue, and health guidelines • 1.5 MB
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Logistics Section -->
+          <section
+            class="tab-content scroll-mt-32 space-y-6 hidden"
+            id="logistics"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-full bg-un-blue/10 flex items-center justify-center text-un-blue"
+              >
+                <span class="material-symbols-outlined">travel_explore</span>
+              </div>
+              <h3 class="text-headline-md font-headline-md text-deep-navy">
+                Information Note
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div
+                class="bg-surface-container-lowest border border-surface-border rounded-xl shadow-sm overflow-hidden transition-all"
+              >
+                <button
+                  class="w-full flex items-center justify-between p-5 text-left hover:bg-surface-container-low transition-colors"
+                  onclick="toggleAccordion('acc-venue')"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="bg-un-blue/10 p-2 rounded-full text-un-blue shrink-0"
+                    >
+                      <span class="material-symbols-outlined"
+                        >location_city</span
+                      >
+                    </div>
+                    <span class="text-body-lg font-bold text-deep-navy"
+                      >Venue & Security</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-200"
+                    id="icon-venue"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="p-5 pt-2 text-body-md font-body-md text-on-surface-variant border-t border-surface-border mt-2 hidden"
+                  id="acc-venue"
+                >
+                  <p class="mb-3">
+                    The meeting will be held at the
+                    <strong>United Nations Conference Centre (UNCC)</strong> in
+                    Addis Ababa, Ethiopia.
+                  </p>
+                  <ul class="list-disc pl-5 mb-4 space-y-2">
+                    <li class="">
+                      All participants must undergo security screening upon
+                      entry.
+                    </li>
+                    <li class="">
+                      Please bring your passport and official invitation letter
+                      to collect your badge.
+                    </li>
+                    <li class="">
+                      Badges must be worn visibly at all times within the UNCC
+                      premises.
+                    </li>
+                  </ul>
+                  <a
+                    class="inline-flex items-center gap-1 text-un-blue font-semibold hover:text-electric-cyan transition-colors"
+                    href="#"
+                  >
+                    View UNCC Map
+                    <span class="material-symbols-outlined text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest border border-surface-border rounded-xl shadow-sm overflow-hidden transition-all"
+              >
+                <button
+                  class="w-full flex items-center justify-between p-5 text-left hover:bg-surface-container-low transition-colors"
+                  onclick="toggleAccordion('acc-visa')"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="bg-un-blue/10 p-2 rounded-full text-un-blue shrink-0"
+                    >
+                      <span class="material-symbols-outlined">flight</span>
+                    </div>
+                    <span class="text-body-lg font-bold text-deep-navy"
+                      >Visa & Health Requirements</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-200"
+                    id="icon-visa"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="p-5 pt-2 text-body-md font-body-md text-on-surface-variant border-t border-surface-border mt-2 hidden"
+                  id="acc-visa"
+                >
+                  <p class="mb-3">
+                    All participants traveling to Ethiopia must hold a valid
+                    passport (valid for at least 6 months from the date of
+                    entry).
+                  </p>
+                  <ul class="list-disc pl-5 mb-4 space-y-2">
+                    <li class="">
+                      <strong>Visa on Arrival:</strong> Available for delegates
+                      with official UN invitation letters.
+                    </li>
+                    <li class="">
+                      <strong>Health:</strong> Yellow fever vaccination
+                      certificate is mandatory if traveling from countries with
+                      risk of yellow fever transmission.
+                    </li>
+                  </ul>
+                  <a
+                    class="inline-flex items-center gap-1 text-un-blue font-semibold hover:text-electric-cyan transition-colors"
+                    href="#"
+                  >
+                    E-Visa Application Portal
+                    <span class="material-symbols-outlined text-sm"
+                      >open_in_new</span
+                    >
+                  </a>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container-lowest border border-surface-border rounded-xl shadow-sm overflow-hidden transition-all"
+              >
+                <button
+                  class="w-full flex items-center justify-between p-5 text-left hover:bg-surface-container-low transition-colors"
+                  onclick="toggleAccordion('acc-hotel')"
+                >
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="bg-un-blue/10 p-2 rounded-full text-un-blue shrink-0"
+                    >
+                      <span class="material-symbols-outlined">hotel</span>
+                    </div>
+                    <span class="text-body-lg font-bold text-deep-navy"
+                      >Accommodation & Transport</span
+                    >
+                  </div>
+                  <span
+                    class="material-symbols-outlined transition-transform duration-200"
+                    id="icon-hotel"
+                    style="transform: rotate(0deg)"
+                    >expand_more</span
+                  >
+                </button>
+                <div
+                  class="p-5 pt-2 text-body-md font-body-md text-on-surface-variant border-t border-surface-border mt-2 hidden"
+                  id="acc-hotel"
+                >
+                  <p class="mb-3">
+                    ECA has negotiated special rates with several hotels near
+                    the UNCC.
+                  </p>
+                  <ul class="list-disc pl-5 mb-4 space-y-2">
+                    <li class="">
+                      <strong>Skylight Hotel:</strong> Code
+                      <code>STATCOM26</code> (Shuttle provided)
+                    </li>
+                    <li class="">
+                      <strong>Radisson Blu:</strong> Code
+                      <code>UNECA-STAT</code> (Walking distance)
+                    </li>
+                    <li class="">
+                      <strong>Jupiter International:</strong> Shuttle provided
+                    </li>
+                  </ul>
+                  <p
+                    class="mb-4 text-sm bg-surface-container p-3 rounded-lg border border-surface-variant"
+                  >
+                    Airport transfers will be provided for all funded
+                    participants and those staying at recommended hotels.
+                  </p>
+                  <a
+                    class="inline-flex items-center gap-1 text-un-blue font-semibold hover:text-electric-cyan transition-colors"
+                    href="#"
+                  >
+                    Full List of Hotels
+                    <span class="material-symbols-outlined text-sm"
+                      >download</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Right Column: Sidebar / Logistics -->
+        <div class="lg:col-span-4 space-y-6">
+          <div
+            class="bg-surface-container-low rounded-2xl p-6 border border-surface-border"
+          >
+            <h3
+              class="text-label-md font-label-md uppercase tracking-widest text-on-surface-variant mb-4 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-sm">apartment</span>
+              Organizer
+            </h3>
+            <div
+              class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-surface-border"
+            >
+              <p class="text-body-md font-body-md font-medium text-deep-navy">
+                African Centre for Statistics (ACS)
+              </p>
+              <p
+                class="text-metadata font-metadata text-on-surface-variant mt-1"
+              >
+                United Nations Economic Commission for Africa
+              </p>
+              <a
+                class="inline-flex items-center gap-1 text-un-blue text-label-md font-label-md mt-3 hover:text-electric-cyan transition-colors"
+                href="https://www.uneca.org/data-and-statistics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Website
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-deep-navy w-full py-section-gap px-margin-mobile md:px-margin-desktop border-t border-on-secondary-fixed-variant"
+    >
+      <div
+        class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base"
+      >
+        <div
+          class="text-label-md font-label-md uppercase tracking-widest text-surface-container-lowest text-center md:text-left mb-4 md:mb-0"
+        >
+          StatCom Africa X
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a
+            class="text-surface-variant text-metadata font-metadata hover:text-white transition-colors focus:outline-none focus:underline"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-surface-variant text-metadata font-metadata hover:text-white transition-colors focus:outline-none focus:underline"
+            href="#"
+            >Terms of Use</a
+          >
+          <a
+            class="text-surface-variant text-metadata font-metadata hover:text-white transition-colors focus:outline-none focus:underline"
+            href="#"
+            >Contact Us</a
+          >
+        </div>
+        <div
+          class="text-metadata font-metadata text-surface-container-lowest mt-4 md:mt-0 opacity-70"
+        >
+          © 2026 United Nations Economic Commission for Africa. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+    <script>
+      function switchTab(tabId) {
+        // Content switching
+        const contents = document.querySelectorAll(".tab-content");
+        contents.forEach((content) => {
+          if (content.id === tabId) {
+            content.classList.remove("hidden");
+            content.classList.add("block");
+          } else {
+            content.classList.remove("block");
+            content.classList.add("hidden");
+          }
+        });
+
+        // Tab button styling
+        const buttons = document.querySelectorAll(".tab-button");
+        buttons.forEach((btn) => {
+          if (btn.getAttribute("onclick").includes(tabId)) {
+            btn.classList.add(
+              "py-2",
+              "my-2",
+              "mx-1",
+              "bg-un-blue",
+              "text-white",
+              "rounded-full",
+            );
+            btn.classList.remove(
+              "py-4",
+              "text-on-surface-variant",
+              "hover:text-un-blue",
+            );
+          } else {
+            btn.classList.remove(
+              "py-2",
+              "my-2",
+              "mx-1",
+              "bg-un-blue",
+              "text-white",
+              "rounded-full",
+            );
+            btn.classList.add(
+              "py-4",
+              "text-on-surface-variant",
+              "hover:text-un-blue",
+            );
+          }
+        });
+      }
+
+      function toggleAccordion(id) {
+        const content = document.getElementById(id);
+        const iconId = "icon-" + id.split("-")[1];
+        const icon = document.getElementById(iconId);
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          if (icon) icon.style.transform = "rotate(180deg)";
+        } else {
+          content.classList.add("hidden");
+          if (icon) icon.style.transform = "rotate(0deg)";
+        }
+      }
+
+      function toggleCalendarDropdown() {
+        const menu = document.getElementById("calendar-dropdown-menu");
+        const icon = document.getElementById("calendar-dropdown-icon");
+
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          // Trigger reflow
+          void menu.offsetWidth;
+          menu.classList.remove("opacity-0", "scale-95");
+          menu.classList.add("opacity-100", "scale-100");
+          if (icon) icon.style.transform = "rotate(180deg)";
+        } else {
+          closeCalendarDropdown();
+        }
+      }
+
+      function closeCalendarDropdown() {
+        const menu = document.getElementById("calendar-dropdown-menu");
+        const icon = document.getElementById("calendar-dropdown-icon");
+        if (!menu || menu.classList.contains("hidden")) return;
+
+        menu.classList.remove("opacity-100", "scale-100");
+        menu.classList.add("opacity-0", "scale-95");
+        if (icon) icon.style.transform = "rotate(0deg)";
+
+        setTimeout(() => {
+          menu.classList.add("hidden");
+        }, 200);
+      }
+
+      // Close calendar dropdown on click outside
+      document.addEventListener("click", (event) => {
+        const dropdown = document.getElementById("add-to-calendar-dropdown");
+        if (dropdown && !dropdown.contains(event.target)) {
+          closeCalendarDropdown();
+        }
+      });
+    </script>
+  </body>
+</html>
