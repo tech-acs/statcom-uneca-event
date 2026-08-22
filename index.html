@@ -194,7 +194,7 @@
     <!-- TopAppBar -->
   <header class="bg-surface-container-lowest top-0 z-50 w-full border-b border-surface-border">
     <!-- Top Utility Bar -->
-    <div class="bg-white border-b border-surface-border">
+    <div class="bg-white border-b border-surface-border hidden md:block">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-2 flex justify-end items-center gap-6">
             <div class="flex items-center gap-4 text-metadata font-metadata text-un-blue">
                 <a href="#" class="hover:text-primary">UNECA site</a>
@@ -228,9 +228,18 @@
                 </button>
             </nav>
             <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-on-surface-variant">
-                <span class="material-symbols-outlined">menu</span>
+            <button class="md:hidden text-on-surface-variant hover:text-un-blue transition-colors" onclick="toggleMobileMenu()">
+                <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
             </button>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-surface-border px-margin-mobile py-4">
+            <nav class="flex flex-col gap-4">
+                <a href="https://www.uneca.org/eca-events/" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Home</a>
+                <a href="https://www.uneca.org/eca-events/all/current-and-upcoming" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Events List</a>
+                <a href="https://www.uneca.org/eca-events/videos" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Videos</a>
+                <a href="https://www.uneca.org/eca-events/albums" class="text-label-md font-label-md uppercase tracking-widest text-[#db9224] hover:text-primary transition-colors">Albums</a>
+            </nav>
         </div>
     </div>
   </header>
@@ -356,7 +365,7 @@
                 >
               </button>
               <div
-                class="absolute top-full left-0 right-0 sm:right-auto mt-2 w-full sm:w-56 bg-surface-container-lowest rounded-xl shadow-xl border border-surface-border py-2 z-50 origin-top transition-all duration-200 opacity-100 scale-100"
+                class="absolute top-full left-0 right-0 sm:right-auto mt-2 w-full sm:w-56 bg-surface-container-lowest rounded-xl shadow-xl border border-surface-border py-2 z-50 origin-top transition-all duration-200 opacity-0 scale-95 hidden"
                 id="calendar-dropdown-menu"
               >
                 <a
@@ -397,11 +406,11 @@
         </div>
         
         <div
-          class="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-0 overflow-hidden md:rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
+          class="flex items-center justify-center w-full lg:w-1/2 overflow-hidden md:rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
         >
           <img
             alt="10th Session of StatCom-Africa"
-            class="absolute inset-0 h-full w-full object-fill object-center"
+            class="w-full h-auto object-contain"
             src="statcom-hero-image.png"
           />
         </div>
@@ -1124,6 +1133,19 @@
       </div>
     </footer>
     <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const icon = document.getElementById("mobile-menu-icon");
+        
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          icon.textContent = "close";
+        } else {
+          menu.classList.add("hidden");
+          icon.textContent = "menu";
+        }
+      }
+
       function switchTab(tabId) {
         // Content switching
         const contents = document.querySelectorAll(".tab-content");
